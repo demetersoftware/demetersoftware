@@ -1,13 +1,284 @@
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
-		<title>Demeter | Expert Software Development from Argentina</title>
+		<title>Demeter | AI & Software Development from Argentina</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Demeter is a premium software development agency based in Argentina, delivering world-class engineering services to clients worldwide. Full-stack experts. Competitive rates. English-speaking team." />
+		<meta name="description" content="Demeter: Premier AI agents & software development from Argentina. Full-stack engineers, agentic AI solutions, competitive rates. Build faster with AI." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+		
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+		
+		<style>
+			:root {
+				--primary: #00d4aa;
+				--primary-dark: #00b894;
+				--secondary: #6c5ce7;
+				--dark: #0f0f0f;
+				--light: #f8f9fa;
+				--gray: #6c757d;
+			}
+			
+			body {
+				font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+				background: #0a0a0a;
+				color: #fff;
+				line-height: 1.6;
+			}
+			
+			h1, h2, h3, h4, .logo {
+				font-family: 'Space Grotesk', sans-serif;
+			}
+			
+			#intro {
+				background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+				padding: 6rem 2rem;
+				text-align: center;
+			}
+			
+			#intro h1 {
+				font-size: 4rem;
+				font-weight: 700;
+				margin-bottom: 1rem;
+				background: linear-gradient(135deg, #00d4aa 0%, #00fff5 50%, #6c5ce7 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
+			
+			#intro p {
+				font-size: 1.5rem;
+				color: #aaa;
+				max-width: 600px;
+				margin: 0 auto 2rem;
+			}
+			
+			#nav {
+				background: rgba(10, 10, 10, 0.95);
+				backdrop-filter: blur(10px);
+				position: fixed;
+				width: 100%;
+				top: 0;
+				z-index: 1000;
+			}
+			
+			#header {
+				padding-top: 80px;
+			}
+			
+			.major h1 {
+				font-size: 2.5rem;
+				margin-bottom: 1rem;
+			}
+			
+			.major h2 {
+				font-size: 2rem;
+				color: #00d4aa;
+			}
+			
+			.section-tag {
+				display: inline-block;
+				background: rgba(0, 212, 170, 0.1);
+				color: #00d4aa;
+				padding: 0.5rem 1rem;
+				border-radius: 50px;
+				font-size: 0.875rem;
+				font-weight: 600;
+				margin-bottom: 1rem;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+			
+			.bento-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 1.5rem;
+				margin: 3rem 0;
+			}
+			
+			.bento-card {
+				background: linear-gradient(145deg, #1a1a2e, #16162a);
+				border: 1px solid rgba(255,255,255,0.05);
+				border-radius: 16px;
+				padding: 2rem;
+				transition: all 0.3s ease;
+			}
+			
+			.bento-card:hover {
+				transform: translateY(-5px);
+				border-color: #00d4aa;
+				box-shadow: 0 20px 40px rgba(0, 212, 170, 0.1);
+			}
+			
+			.bento-card h3 {
+				color: #fff;
+				margin-bottom: 0.75rem;
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+			}
+			
+			.bento-card p {
+				color: #aaa;
+				font-size: 0.95rem;
+			}
+			
+			.bento-card .icon {
+				font-size: 1.5rem;
+			}
+			
+			.ai-badge {
+				background: linear-gradient(135deg, #6c5ce7, #a855f7);
+				color: white;
+				padding: 0.25rem 0.75rem;
+				border-radius: 4px;
+				font-size: 0.7rem;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+			}
+			
+			.cta-button {
+				display: inline-block;
+				background: linear-gradient(135deg, #00d4aa, #00b894);
+				color: #0a0a0a;
+				padding: 1rem 2.5rem;
+				border-radius: 8px;
+				font-weight: 600;
+				font-size: 1.1rem;
+				text-decoration: none;
+				transition: all 0.3s ease;
+				border: none;
+				cursor: pointer;
+			}
+			
+			.cta-button:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 10px 30px rgba(0, 212, 170, 0.3);
+			}
+			
+			.cta-button.secondary {
+				background: transparent;
+				border: 2px solid #00d4aa;
+				color: #00d4aa;
+			}
+			
+			.cta-button.secondary:hover {
+				background: #00d4aa;
+				color: #0a0a0a;
+			}
+			
+			.stats {
+				display: flex;
+				justify-content: center;
+				gap: 4rem;
+				margin: 3rem 0;
+				flex-wrap: wrap;
+			}
+			
+			.stat {
+				text-align: center;
+			}
+			
+			.stat-number {
+				font-size: 3rem;
+				font-weight: 700;
+				color: #00d4aa;
+				font-family: 'Space Grotesk', sans-serif;
+			}
+			
+			.stat-label {
+				color: #888;
+				font-size: 0.9rem;
+			}
+			
+			.testimonial {
+				background: linear-gradient(145deg, #1a1a2e, #16162a);
+				border-left: 4px solid #00d4aa;
+				padding: 2rem;
+				border-radius: 0 16px 16px 0;
+				margin: 2rem 0;
+			}
+			
+			.testimonial p {
+				font-style: italic;
+				font-size: 1.1rem;
+				color: #ddd;
+			}
+			
+			.testimonial .author {
+				margin-top: 1rem;
+				color: #00d4aa;
+				font-weight: 600;
+			}
+			
+			#footer {
+				background: #0a0a0a;
+				border-top: 1px solid rgba(255,255,255,0.05);
+			}
+			
+			#footer h2 {
+				color: #fff;
+			}
+			
+			.contact-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 2rem;
+				margin-top: 2rem;
+			}
+			
+			.contact-item {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+			}
+			
+			.contact-item .icon {
+				width: 50px;
+				height: 50px;
+				background: rgba(0, 212, 170, 0.1);
+				border-radius: 12px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #00d4aa;
+				font-size: 1.2rem;
+			}
+			
+			.pulse {
+				animation: pulse 2s infinite;
+			}
+			
+			@keyframes pulse {
+				0%, 100% { opacity: 1; }
+				50% { opacity: 0.7; }
+			}
+			
+			/* Responsive */
+			@media (max-width: 768px) {
+				#intro h1 {
+					font-size: 2.5rem;
+				}
+				
+				#intro p {
+					font-size: 1.1rem;
+				}
+				
+				.stats {
+					gap: 2rem;
+				}
+				
+				.stat-number {
+					font-size: 2rem;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -16,11 +287,15 @@
 
 				<!-- Intro -->
 					<div id="intro">
-						<h1>Demeter</h1>
-						<p>World-class software engineering.<br />Born in Argentina, built for the world.</p>
+						<span class="section-tag">✨ Now Offering Agentic AI</span>
+						<h1>Build Faster with AI</h1>
+						<p>Turn ideas into reality with our expert team. From agentic AI solutions to full-stack development — we deliver code that ships.</p>
 						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">See how we work</a></li>
+							<li><a href="#services" class="cta-button">See What We Do →</a></li>
 						</ul>
+						<p style="margin-top: 2rem; font-size: 0.9rem; color: #666;">
+							<span class="pulse">●</span> Available for new projects
+						</p>
 					</div>
 
 				<!-- Header -->
@@ -31,8 +306,8 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">For companies</a></li>
-							<li><a href="workers.html">For workers</a></li>
+							<li class="active"><a href="index.html">Services</a></li>
+							<li><a href="workers.html">For Workers</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="mailto:demetersoftware@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
@@ -44,123 +319,139 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Post -->
-							<section class="post">
-								<header class="major">
-									<h1>Software That Scales.<br />Engineers You Can Trust.</h1>
-									<p>We build robust, maintainable software that helps businesses grow.<br />
-									Based in Mendoza, Argentina — working with clients across the US, Europe, and beyond.</p>
-								</header>
-								<div class="image main"><img src="images/pic01.jpg" alt="Demeter team working on software" /></div>
+						<section class="post">
+							<header class="major" style="text-align: center; padding: 4rem 2rem;">
+								<span class="section-tag">Why Demeter</span>
+								<h1>World-Class Engineering.<br />Argentina Pricing.</h1>
+								<p style="max-width: 700px; margin: 0 auto; color: #aaa;">We build software that actually works. No consultants, no overhead — just engineers who ship.</p>
+							</header>
+							
+							<div class="stats">
+								<div class="stat">
+									<div class="stat-number">50%+</div>
+									<div class="stat-label">Cost Savings</div>
+								</div>
+								<div class="stat">
+									<div class="stat-number">3+</div>
+									<div class="stat-label">Years Experience</div>
+								</div>
+								<div class="stat">
+									<div class="stat-number">100%</div>
+									<div class="stat-label">English Fluent</div>
+								</div>
+								<div class="stat">
+									<div class="stat-number">24h</div>
+									<div class="stat-label">Response Time</div>
+								</div>
+							</div>
+
+							<hr />
+
+							<div id="services">
+								<h2 style="text-align: center; margin-bottom: 3rem;">What We Do</h2>
 								
-								<h2>Why Work With Us?</h2>
-								<div class="row">
-									<div class="col-6 col-12-small">
-										<h3>🌎 US-Friendly Time Zones</h3>
-										<p>We're in Argentina (GMT-3), which means minimal overlap issues with US-based teams. Real-time communication when you need it.</p>
+								<div class="bento-grid">
+									<div class="bento-card">
+										<h3><span class="ai-badge">Hot</span> 🤖 Agentic AI</h3>
+										<p>Autonomous AI agents that work for you 24/7. Workflow automation, intelligent assistants, and custom AI solutions built with LangChain, CrewAI, and custom frameworks.</p>
 									</div>
-									<div class="col-6 col-12-small">
-										<h3>💰 Competitive Rates</h3>
-										<p>Top-tier engineering at a fraction of US/European rates. Get more value without compromising on quality.</p>
+									
+									<div class="bento-card">
+										<h3>🧠 AI Integration</h3>
+										<p>Add AI superpowers to your existing apps. LLMs, embeddings, vector databases, RAG systems, and smart APIs that make your software smarter.</p>
 									</div>
-									<div class="col-6 col-12-small">
-										<h3>💬 English Fluency</h3>
-										<p>Our team communicates fluently in English. Technical discussions, documentation, and meetings — no language barriers.</p>
+									
+									<div class="bento-card">
+										<h3>💻 Full-Stack Development</h3>
+										<p>End-to-end web and mobile apps. React, Next.js, Node.js, Python, PostgreSQL — you name it. Clean code that scales.</p>
 									</div>
-									<div class="col-6 col-12-small">
-										<h3>🚀 Full-Stack Expertise</h3>
-										<p>From frontend UX to backend architecture, DevOps to cloud deployment. We build complete solutions, not just parts.</p>
+									
+									<div class="bento-card">
+										<h3>📱 Mobile Apps</h3>
+										<p>iOS and Android apps that users love. React Native, Flutter, or native — built for performance and great UX.</p>
 									</div>
-								</div>
-
-								<hr />
-
-								<h2>Our Approach</h2>
-								<p>We don't just write code — we partner with you to solve problems. Every line we ship is:</p>
-								<ul>
-									<li><strong>Well-tested</strong> — Automated tests aren't optional</li>
-									<li><strong>Documented</strong> — Future-you will thank present-you</li>
-									<li><strong>Maintainable</strong> — Clean code is sustainable code</li>
-									<li><strong>Secure</strong> — We take security seriously, not as an afterthought</li>
-								</ul>
-
-								<p>Whether you need a new product built, an existing system maintained, or technical guidance on your architecture — we're ready to help.</p>
-
-								<hr />
-
-								<h2>Services</h2>
-								<div class="row">
-									<div class="col-6 col-12-small">
-										<h4>Web Development</h4>
-										<p>Modern web apps with React, Next.js, Vue, Node.js, Python, and more.</p>
+									
+									<div class="bento-card">
+										<h3>🔌 API Development</h3>
+										<p>Robust APIs that connect everything. REST, GraphQL, webhooks, and third-party integrations done right.</p>
 									</div>
-									<div class="col-6 col-12-small">
-										<h4>Mobile Apps</h4>
-										<p>iOS and Android apps with React Native, Flutter, Swift, and Kotlin.</p>
-									</div>
-									<div class="col-6 col-12-small">
-										<h4>API Development</h4>
-										<p>REST and GraphQL APIs with proper documentation and third-party integrations.</p>
-									</div>
-									<div class="col-6 col-12-small">
-										<h4>Technical Consulting</h4>
-										<p>Architecture reviews, code audits, and tech stack guidance.</p>
+									
+									<div class="bento-card">
+										<h3>🎯 MVP & Prototyping</h3>
+										<p>Get to market fast. We build MVPs in weeks, not months. Validate your idea before you scale.</p>
 									</div>
 								</div>
-							</section>
+							</div>
+
+							<hr />
+
+							<h2 style="text-align: center; margin-bottom: 2rem;">Ready to Build?</h2>
+							<div style="text-align: center; margin-bottom: 4rem;">
+								<a href="#contact" class="cta-button">Let's Talk →</a>
+								<p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">No commitment. Just a conversation.</p>
+							</div>
+
+						</section>
 
 					</div>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<section>
-							<h2>Let's Build Something Great</h2>
-							<p>Tell us about your project. We'll get back to you within 24 hours.</p>
+						<section id="contact">
+							<h2 style="text-align: center;">Let's Build Something Great</h2>
+							<p style="text-align: center; color: #888; margin-bottom: 2rem;">Tell us about your project. We'll get back to you within 24 hours.</p>
 							<form id="contact-form">
 								<div class="fields">
 								  <input type="hidden" name="contact_number">
 									<div class="field">
 										<label for="name">Name</label>
-										<input type="text" name="from_name" id="from_name" required />
+										<input type="text" name="from_name" id="from_name" required style="background: #1a1a2e; border: 1px solid #333; color: #fff;" />
 									</div>
 									<div class="field">
 										<label for="email">Email</label>
-										<input type="email" name="from_email" id="from_email" required />
+										<input type="email" name="from_email" id="from_email" required style="background: #1a1a2e; border: 1px solid #333; color: #fff;" />
 									</div>
 									<div class="field">
 										<label for="message">Tell us about your project</label>
-										<textarea name="message" id="message" rows="4" placeholder="What are you building? What's your timeline? What's your budget range?" required></textarea>
+										<textarea name="message" id="message" rows="4" placeholder="What are you building? Need AI integration? What's your timeline?" required style="background: #1a1a2e; border: 1px solid #333; color: #fff;"></textarea>
 									</div>
 								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+								<ul class="actions" style="justify-content: center;">
+									<li><input type="submit" value="Send Message" class="cta-button" /></li>
 								</ul>
 							</form>
 						</section>
+						
 						<section class="split contact">
-							<section class="alt">
-								<h3>Location</h3>
-								<p>Mendoza, Argentina</p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="mailto:demetersoftware@gmail.com">demetersoftware@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Connect</h3>
-								<ul class="icons alt">
-									<li><a href="mailto:demetersoftware@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-									<li><a href="https://github.com/demetersoftware" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="https://linkedin.com/company/demetersoftware" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								</ul>
-							</section>
+							<div class="contact-grid" style="justify-content: center;">
+								<div class="contact-item">
+									<div class="icon">📍</div>
+									<div>
+										<strong>Location</strong>
+										<p style="color: #888; margin: 0;">Mendoza, Argentina</p>
+									</div>
+								</div>
+								<div class="contact-item">
+									<div class="icon">✉️</div>
+									<div>
+										<strong>Email</strong>
+										<p style="color: #888; margin: 0;"><a href="mailto:demetersoftware@gmail.com" style="color: #00d4aa;">demetersoftware@gmail.com</a></p>
+									</div>
+								</div>
+								<div class="contact-item">
+									<div class="icon">💬</div>
+									<div>
+										<strong>Social</strong>
+										<p style="color: #888; margin: 0;"><a href="https://linkedin.com/company/demetersoftware" style="color: #00d4aa;">LinkedIn</a> · <a href="https://github.com/demetersoftware" style="color: #00d4aa;">GitHub</a></p>
+									</div>
+								</div>
+							</div>
 						</section>
-					</footer>
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>Demeter Software</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+						<div id="copyright" style="text-align: center; margin-top: 3rem;">
+							<ul style="justify-content: center;"><li>© 2024 Demeter Software</li><li>Built with AI 🚀</li></ul>
+						</div>
+					</footer>
 
 			</div>
 
@@ -188,7 +479,7 @@
 													alert('Message sent! We\'ll get back to you soon.');
 											}, function(error) {
 													console.log('FAILED...', error);
-													alert('Failed to send message. Please email us directly.');
+													alert('Failed to send. Email us directly at demetersoftware@gmail.com');
 											});
 							});
 					}
